@@ -41,6 +41,43 @@
       ]
     },
     {
+      "id": "claude-opus-5-5-max",
+      "title": "Claude Opus 5.5 · max",
+      "maker": "Anthropic",
+      "date": "2026-11-24",
+      "page": "entries/claude-opus-5-5-max/index.html",
+      "variants": [],
+      "conditions": {
+        "Where it runs": "Cloud (Anthropic API)",
+        "Interface": "Claude Code subagent (general-purpose), started from the desktop app",
+        "Model": "claude-opus-5-5",
+        "Quantization": "n/a (hosted)",
+        "Hardware": "n/a (hosted)",
+        "Context window": "n/a (hosted)",
+        "Reasoning effort": "max",
+        "Strategy": "One prompt; the agent was free to use its tools (files, shell, headless Chrome for testing)"
+      },
+      "metrics": {
+        "requests": 1,
+        "totalSeconds": 4081,
+        "generatedTokens": null,
+        "generatedTokensNote": "Output not measured separately; 563,326 tokens processed in total (input and output across all agent turns)",
+        "tokensPerSecond": null,
+        "lines": 6609,
+        "failedAttempts": 0
+      },
+      "steps": [
+        { "name": "One prompt, agentic run (163 tool calls)", "prompt": "entries/claude-opus-5-5-max/prompt.txt", "answer": "entries/claude-opus-5-5-max/answer.md", "seconds": 4081, "tokens": null, "tokensPerSecond": null, "finish": "stop" }
+      ],
+      "notes": [
+        "Built “Unicornis”, a five-page site (6,609 lines in 16 files): a home page with a unicorn constellation and a fact orb, a legends timeline, a filterable bestiary of 14 unicorns with a “Which unicorn are you?” quiz, an atelier to design your own unicorn (PNG download, share link, saved stable) and a Monoceros night-sky map built from real star positions.",
+        "Every illustration is SVG drawn in code; no generated images. The only external resource is Google Fonts, with system fonts as fallback.",
+        "It tested itself in headless Chrome at desktop and phone width, checked keyboard access and reduced motion, and verified that all 4,096 quiz answer combinations can reach every creature.",
+        "Besides the base prompt it was only told which folder to write to and to reply with a summary. Facts come from the model's own knowledge and were not checked against sources.",
+        "Ran as a subagent in the same session that runs this experiment. A CHANGELOG.md it created in its folder was left out of the published copy."
+      ]
+    },
+    {
       "id": "gpt-6-2-astra-max",
       "title": "Astra 6.2 · max",
       "maker": "OpenAI",

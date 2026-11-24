@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Bestiary · Unicornis</title>
+  <meta name="description" content="Fourteen unicorns of myth and nature, from Pliny's monoceros and the Chinese qilin to the narwhal and the Siberian unicorn, plus a quiz: which unicorn are you?">
+  <meta name="theme-color" content="#0e0a2b">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,0..100,0..1;1,9..144,400..800,0..100,0..1&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="bm-h" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+          <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-h)"/>
+          <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+        </svg>
+        <span class="brand-name">Unicornis</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="visually-hidden">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="legends.html">Legends</a></li>
+          <li><a href="bestiary.html" aria-current="page">Bestiary</a></li>
+          <li><a href="atelier.html">Atelier</a></li>
+          <li><a href="sky.html">Night Sky</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero on-dark" aria-labelledby="page-title">
+      <canvas class="starfield" data-starfield data-density=".9" data-seed="bestiary"></canvas>
+      <div class="container page-hero-grid">
+        <div>
+          <p class="eyebrow">A field guide</p>
+          <h1 id="page-title">The Bestiary</h1>
+          <p class="lede">Fourteen unicorns of legend and nature, gathered from Europe, Asia, South America and the Arctic seas. Each one is drawn by the thing that makes it a unicorn: its horn.</p>
+          <div class="cta-row" style="margin-top: 28px">
+            <a class="btn btn--primary" href="#quiz" data-sparkle>Which one are you?</a>
+            <a class="btn btn--ghost" href="#herd" style="color: var(--moon-1)">Browse the herd</a>
+          </div>
+        </div>
+        <div class="horn-row" data-horn-row aria-hidden="true"></div>
+      </div>
+      <svg class="divider" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M0 80 L0 30 C300 70 560 66 820 40 S1240 4 1440 36 L1440 80 Z"/></svg>
+    </section>
+
+    <section class="section section--pearl section--tight" id="herd" aria-labelledby="herd-title">
+      <div class="container">
+        <h2 id="herd-title" class="visually-hidden">The herd</h2>
+        <div class="toolbar">
+          <div class="toolbar-group" role="group" aria-label="Filter by kind" data-kind-group>
+            <button class="chip" type="button" aria-pressed="true" data-kind="all">All <span class="count" data-count-kind="all"></span></button>
+            <button class="chip" type="button" aria-pressed="false" data-kind="legend">Legends <span class="count" data-count-kind="legend"></span></button>
+            <button class="chip" type="button" aria-pressed="false" data-kind="real">Real animals <span class="count" data-count-kind="real"></span></button>
+          </div>
+          <label class="search">
+            <span class="visually-hidden">Search the bestiary</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M20 20l-4.8-4.8"/></g></svg>
+            <input type="search" placeholder="Search the herd…" autocomplete="off" data-search>
+          </label>
+        </div>
+        <div class="toolbar">
+          <div class="toolbar-group" role="group" aria-label="Filter by region" data-region-group>
+            <span class="toolbar-label" aria-hidden="true">Region</span>
+          </div>
+        </div>
+        <noscript><p class="noscript-note">The Bestiary draws its creatures with JavaScript. Please enable it to meet the herd.</p></noscript>
+        <p class="results-count" data-results aria-live="polite"></p>
+        <div class="beast-grid" data-beast-grid></div>
+      </div>
+    </section>
+
+    <section class="section section--night on-dark" id="quiz" aria-labelledby="quiz-title">
+      <canvas class="starfield" data-starfield data-density=".6" data-meteors="false" data-seed="quiz"></canvas>
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">The quiz</p>
+          <h2 id="quiz-title">Which unicorn are you?</h2>
+          <p class="lede">Six questions. No wrong answers. Exactly one horn.</p>
+        </div>
+        <div class="quiz" data-quiz data-reveal></div>
+      </div>
+    </section>
+  </main>
+
+  <dialog class="notes" data-notes aria-labelledby="notes-title">
+    <button class="notes-close" type="button" data-close aria-label="Close field notes">
+      <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+    </button>
+    <div data-notes-content></div>
+  </dialog>
+
+  <footer class="site-footer on-dark">
+    <canvas class="starfield" data-starfield data-density=".7" data-meteors="false" data-seed="footer"></canvas>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="bm-f" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+              <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-f)"/>
+              <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+            </svg>
+            <span class="brand-name">Unicornis</span>
+          </a>
+          <p>A field guide to the world's most elusive creature. Leaving hoofprints in the dew since about 2600 BCE.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="legends.html">Legends through the ages</a></li>
+            <li><a href="bestiary.html">The Bestiary</a></li>
+            <li><a href="atelier.html">The Atelier</a></li>
+            <li><a href="sky.html">The Unicorn in the Sky</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Good to know</h2>
+          <ul>
+            <li><a href="index.html#faq">Unicorn FAQ</a></li>
+            <li><a href="bestiary.html#quiz">Which unicorn are you?</a></li>
+            <li><a href="legends.html#hoax">The great horn hoax</a></li>
+            <li><a href="sky.html#find">How to find Monoceros</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>No unicorns were harmed (or, admittedly, found) in the making of this website.</p>
+        <p>Psst: type <kbd>unicorn</kbd> anywhere on the page.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/horns.js"></script>
+  <script src="js/data-beasts.js"></script>
+  <script src="js/bestiary.js"></script>
+</body>
+</html>

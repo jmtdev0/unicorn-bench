@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Unicorn in the Sky · Unicornis</title>
+  <meta name="description" content="An interactive star map of Monoceros, the Unicorn constellation: how to find it, its nebulae and star clusters, and a chance to trace your own unicorn among the stars.">
+  <meta name="theme-color" content="#07051a">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,0..100,0..1;1,9..144,400..800,0..100,0..1&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="sky-page">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="bm-h" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+          <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-h)"/>
+          <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+        </svg>
+        <span class="brand-name">Unicornis</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="visually-hidden">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="legends.html">Legends</a></li>
+          <li><a href="bestiary.html">Bestiary</a></li>
+          <li><a href="atelier.html">Atelier</a></li>
+          <li><a href="sky.html" aria-current="page">Night Sky</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero sky-hero on-dark" aria-labelledby="page-title">
+      <canvas class="starfield" data-starfield data-density="1.1" data-seed="sky-hero"></canvas>
+      <div class="container">
+        <p class="eyebrow">Stargazing</p>
+        <h1 id="page-title">The Unicorn in the Sky</h1>
+        <p class="lede">Between Orion and the Great Dog gallops <em>Monoceros</em>, the Unicorn: a faint constellation charted around 1612 and full of hidden treasures. Explore the map, then go outside and find it for real.</p>
+      </div>
+    </section>
+
+    <section class="section section--tight on-dark" id="map" aria-labelledby="map-title" style="padding-top: 8px">
+      <div class="container">
+        <h2 id="map-title" class="visually-hidden">Interactive map of Monoceros</h2>
+        <noscript><p class="noscript-note">The star map is drawn with JavaScript. Please enable it to explore the Unicorn.</p></noscript>
+        <div class="sky-toolbar" role="toolbar" aria-label="Map layers">
+          <button class="toggle" type="button" aria-pressed="true" data-layer="figure"><span class="dot" aria-hidden="true"></span>Our unicorn</button>
+          <button class="toggle" type="button" aria-pressed="true" data-layer="triangle"><span class="dot" aria-hidden="true"></span>Winter Triangle</button>
+          <button class="toggle" type="button" aria-pressed="true" data-layer="dso"><span class="dot" aria-hidden="true"></span>Nebulae &amp; clusters</button>
+          <button class="toggle" type="button" aria-pressed="true" data-layer="labels"><span class="dot" aria-hidden="true"></span>Labels</button>
+          <span class="spacer"></span>
+          <button class="toggle toggle--trace" type="button" aria-pressed="false" data-trace>
+            <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 20l5-9 5 4 6-11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            Trace your own
+          </button>
+        </div>
+
+        <div class="sky-layout">
+          <div class="sky-map" data-sky-map>
+            <svg class="sky-svg" data-sky-svg viewBox="0 0 960 800" role="group" aria-label="Star map of Monoceros and the Winter Triangle. North is up and east is to the left."></svg>
+            <p class="map-hint" aria-hidden="true">Click two stars to connect them</p>
+            <p class="compass" aria-hidden="true">N ↑ · E ←</p>
+          </div>
+
+          <aside class="sky-panel" aria-label="Object details">
+            <div class="sky-info" data-sky-info aria-live="polite"></div>
+            <div class="sky-info" style="min-height: 0; padding: 18px 20px">
+              <p class="kind" style="margin-bottom: .7rem">Jump to</p>
+              <div class="object-list" data-object-list></div>
+            </div>
+            <div class="sky-info" data-trace-panel style="min-height: 0; padding: 18px 20px" hidden>
+              <p class="kind">Your constellation</p>
+              <p class="trace-stats" data-trace-stats></p>
+              <div class="cta-row">
+                <button class="btn btn--small btn--ghost" type="button" data-trace-undo style="color: var(--moon-1)">Undo</button>
+                <button class="btn btn--small btn--ghost" type="button" data-trace-clear style="color: var(--moon-1)">Clear all</button>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <p class="note" style="color: var(--moon-3); margin-top: 14px">Star positions and brightnesses are real; the faint background stars are decorative. Constellation lines are a matter of taste: the IAU defines each constellation's borders, not its stick figure.</p>
+      </div>
+    </section>
+
+    <section class="section section--night on-dark" id="find" aria-labelledby="find-title">
+      <canvas class="starfield" data-starfield data-density=".5" data-meteors="false" data-seed="find"></canvas>
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">How to find it</p>
+          <h2 id="find-title">Three steps to the Unicorn</h2>
+          <p class="lede">Monoceros straddles the celestial equator, so it can be seen from almost everywhere on Earth. Look for it on evenings from January to March.</p>
+        </div>
+        <ol class="howto">
+          <li data-reveal>
+            <h3>Find Orion</h3>
+            <p>On a winter evening in the Northern Hemisphere (a summer one in the Southern), look for the three bright stars in a row that make Orion's Belt.</p>
+          </li>
+          <li data-reveal style="--reveal-delay: .08s">
+            <h3>Draw the Winter Triangle</h3>
+            <p>Connect orange Betelgeuse on Orion's shoulder, Sirius, the brightest star in the night sky, and Procyon in the Little Dog.</p>
+          </li>
+          <li data-reveal style="--reveal-delay: .16s">
+            <h3>Look inside</h3>
+            <p>The Unicorn fills most of the triangle. Its brightest stars are only around fourth magnitude, so you will need a dark sky, patient eyes and a little imagination.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section on-dark" id="treasures" aria-labelledby="treasures-title" style="background: var(--night-0)">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Treasures of Monoceros</p>
+          <h2 id="treasures-title">A faint constellation, full of wonders</h2>
+          <p class="lede">The Unicorn lies along the Milky Way, so it is rich in star clusters and glowing clouds of gas. Here are six favorites.</p>
+        </div>
+        <div class="grid grid--3" data-treasures></div>
+
+        <div class="grid grid--2" style="margin-top: clamp(48px, 6vw, 72px)">
+          <div class="sky-info" style="min-height: 0" data-reveal>
+            <p class="kind">A modern constellation</p>
+            <h3 style="color: var(--moon-1)">Not in Ptolemy's list</h3>
+            <p class="mb-0">Monoceros is not among the 48 constellations catalogued by Ptolemy in the 2nd century. It first appeared on a celestial globe by the cartographer Petrus Plancius around 1612, filling a dim gap beside Orion, and was later popularized by the astronomer Jakob Bartsch.</p>
+          </div>
+          <div class="sky-info" style="min-height: 0" data-reveal>
+            <p class="kind">A unicorn black hole?</p>
+            <h3 style="color: var(--moon-1)">"The Unicorn"</h3>
+            <p class="mb-0">In 2021 astronomers announced a possible small black hole, nicknamed "the Unicorn" both for its constellation and its rarity, orbiting the red giant V723 Monocerotis. Later studies have questioned whether it is a black hole at all. Elusive, as unicorns tend to be.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <canvas class="starfield" data-starfield data-density=".7" data-meteors="false" data-seed="footer"></canvas>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="bm-f" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+              <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-f)"/>
+              <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+            </svg>
+            <span class="brand-name">Unicornis</span>
+          </a>
+          <p>A field guide to the world's most elusive creature. Leaving hoofprints in the dew since about 2600 BCE.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="legends.html">Legends through the ages</a></li>
+            <li><a href="bestiary.html">The Bestiary</a></li>
+            <li><a href="atelier.html">The Atelier</a></li>
+            <li><a href="sky.html">The Unicorn in the Sky</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Good to know</h2>
+          <ul>
+            <li><a href="index.html#faq">Unicorn FAQ</a></li>
+            <li><a href="bestiary.html#quiz">Which unicorn are you?</a></li>
+            <li><a href="legends.html#hoax">The great horn hoax</a></li>
+            <li><a href="sky.html#find">How to find Monoceros</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>No unicorns were harmed (or, admittedly, found) in the making of this website.</p>
+        <p>Psst: type <kbd>unicorn</kbd> anywhere on the page.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/sky.js"></script>
+</body>
+</html>

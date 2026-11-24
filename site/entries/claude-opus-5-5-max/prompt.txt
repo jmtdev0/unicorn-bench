@@ -1,0 +1,4 @@
+Make a website dedicated to unicorns.
+
+Save all of the website's files in this folder (it is empty and yours to use): E:\tmp\unicorns\opus-max\work
+The entry page must be index.html in that folder. When you finish, reply with a short summary of what you built and the list of files.

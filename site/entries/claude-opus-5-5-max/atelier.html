@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Atelier · Unicornis</title>
+  <meta name="description" content="Design your own unicorn: choose its coat, mane, horn, eyes and scene, give it a name, download it and keep it in your stable.">
+  <meta name="theme-color" content="#0e0a2b">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,0..100,0..1;1,9..144,400..800,0..100,0..1&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="bm-h" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+          <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-h)"/>
+          <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+        </svg>
+        <span class="brand-name">Unicornis</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="visually-hidden">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="legends.html">Legends</a></li>
+          <li><a href="bestiary.html">Bestiary</a></li>
+          <li><a href="atelier.html" aria-current="page">Atelier</a></li>
+          <li><a href="sky.html">Night Sky</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero atelier-hero on-dark" aria-labelledby="page-title">
+      <canvas class="starfield" data-starfield data-density=".9" data-seed="atelier"></canvas>
+      <div class="container">
+        <p class="eyebrow">The studio</p>
+        <h1 id="page-title">The Atelier</h1>
+        <p class="lede">Design a unicorn of your very own. Choose its coat, mane and horn, give it a name, and keep it in your stable. Every unicorn you make is drawn fresh, right here in your browser.</p>
+        <noscript><p class="noscript-note">The Atelier draws unicorns with JavaScript. Please enable it to start designing.</p></noscript>
+      </div>
+    </section>
+
+    <div class="section section--pearl section--tight atelier-section" style="padding-top: 0">
+      <div class="container">
+        <div class="atelier">
+          <!-- Stage -->
+          <div class="stage">
+            <div class="stage-frame-wrap">
+              <div class="stage-frame" data-stage role="img" aria-label="Your unicorn"></div>
+            </div>
+            <div class="stage-caption" aria-live="polite">
+              <strong data-name-display>Your unicorn</strong>
+              <span data-summary></span>
+            </div>
+            <div class="stage-actions">
+              <button class="btn btn--primary" type="button" data-random data-sparkle>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/></g><g fill="currentColor"><circle cx="8.5" cy="8.5" r="1.6"/><circle cx="15.5" cy="15.5" r="1.6"/><circle cx="15.5" cy="8.5" r="1.6"/><circle cx="8.5" cy="15.5" r="1.6"/><circle cx="12" cy="12" r="1.6"/></g></svg>
+                Surprise me
+              </button>
+              <button class="btn btn--soft" type="button" data-save>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 20s-7.5-4.6-7.5-10.2A4.2 4.2 0 0 1 12 7.3a4.2 4.2 0 0 1 7.5 2.5C19.5 15.4 12 20 12 20z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                Save to stable
+              </button>
+              <button class="btn btn--soft" type="button" data-download>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 4v11M7 10.5l5 5 5-5M5 20h14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Download
+              </button>
+              <button class="btn btn--soft" type="button" data-share>
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 14a4.5 4.5 0 0 0 6.4 0l3-3a4.5 4.5 0 0 0-6.4-6.4l-1 1M14 10a4.5 4.5 0 0 0-6.4 0l-3 3a4.5 4.5 0 0 0 6.4 6.4l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Copy link
+              </button>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <div class="panel">
+            <div class="panel-body" style="padding-bottom: 6px">
+              <label class="control-title" for="unicorn-name">Name</label>
+              <div class="name-field">
+                <input id="unicorn-name" type="text" maxlength="48" autocomplete="off" spellcheck="false" data-name>
+                <button class="icon-btn" type="button" data-shuffle-name aria-label="Suggest another name" title="Suggest another name">
+                  <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 3c.6 4.6 2.4 6.4 7 7-4.6.6-6.4 2.4-7 7-.6-4.6-2.4-6.4-7-7 4.6-.6 6.4-2.4 7-7z" fill="currentColor"/><path d="M19 15.5c.25 1.9 1 2.6 2.8 2.85-1.85.25-2.55 1-2.8 2.85-.25-1.85-1-2.6-2.8-2.85 1.8-.25 2.55-.95 2.8-2.85z" fill="currentColor" opacity=".7"/></svg>
+                </button>
+              </div>
+            </div>
+
+            <div class="panel-tabs" role="tablist" aria-label="Unicorn features" data-tabs>
+              <button class="panel-tab" type="button" role="tab" id="tab-coat" aria-controls="panel-coat" aria-selected="true">Coat &amp; mane</button>
+              <button class="panel-tab" type="button" role="tab" id="tab-horn" aria-controls="panel-horn" aria-selected="false" tabindex="-1">Horn</button>
+              <button class="panel-tab" type="button" role="tab" id="tab-face" aria-controls="panel-face" aria-selected="false" tabindex="-1">Face</button>
+              <button class="panel-tab" type="button" role="tab" id="tab-extras" aria-controls="panel-extras" aria-selected="false" tabindex="-1">Extras</button>
+              <button class="panel-tab" type="button" role="tab" id="tab-scene" aria-controls="panel-scene" aria-selected="false" tabindex="-1">Scene</button>
+            </div>
+
+            <form class="panel-body" data-controls>
+              <div class="panel-section" role="tabpanel" id="panel-coat" aria-labelledby="tab-coat">
+                <fieldset class="control">
+                  <legend>Coat <span class="value" data-value="coat"></span></legend>
+                  <div class="swatches" data-options="coat"></div>
+                </fieldset>
+                <fieldset class="control">
+                  <legend>Mane &amp; tail <span class="value" data-value="mane"></span></legend>
+                  <div class="tiles" data-options="mane"></div>
+                </fieldset>
+                <fieldset class="control">
+                  <legend>Hooves</legend>
+                  <div class="pills" data-options="hooves"></div>
+                </fieldset>
+              </div>
+
+              <div class="panel-section" role="tabpanel" id="panel-horn" aria-labelledby="tab-horn" hidden>
+                <fieldset class="control">
+                  <legend>Horn <span class="value" data-value="horn"></span></legend>
+                  <div class="tiles" data-options="horn"></div>
+                </fieldset>
+                <div class="control">
+                  <label class="control-title" for="horn-length">Length <output for="horn-length" data-value="hornLength"></output></label>
+                  <input class="range" id="horn-length" type="range" min="20" max="90" step="1" name="hornLength">
+                  <div class="range-scale" aria-hidden="true"><span>Modest</span><span>Majestic</span></div>
+                </div>
+                <p class="note">Every spiral horn in the Atelier twists counterclockwise, like a narwhal tusk, because that is what most "unicorn horns" in history really were.</p>
+              </div>
+
+              <div class="panel-section" role="tabpanel" id="panel-face" aria-labelledby="tab-face" hidden>
+                <fieldset class="control">
+                  <legend>Eyes</legend>
+                  <div class="pills" data-options="eyes"></div>
+                </fieldset>
+                <fieldset class="control">
+                  <legend>Markings</legend>
+                  <div class="pills" data-options="marking"></div>
+                </fieldset>
+              </div>
+
+              <div class="panel-section" role="tabpanel" id="panel-extras" aria-labelledby="tab-extras" hidden>
+                <div class="control">
+                  <label class="switch">
+                    <input type="checkbox" name="wings">
+                    <span class="switch-text"><strong>Wings</strong><small>Technically a winged unicorn. (Purists note: "alicorn" first meant the horn itself.)</small></span>
+                    <span class="track" aria-hidden="true"></span>
+                  </label>
+                </div>
+                <fieldset class="control">
+                  <legend>Accessories</legend>
+                  <label class="switch"><input type="checkbox" name="crown"><span class="switch-text"><strong>Flower crown</strong><small>Freshly picked, slightly lopsided.</small></span><span class="track" aria-hidden="true"></span></label>
+                  <label class="switch"><input type="checkbox" name="collar"><span class="switch-text"><strong>Golden collar</strong><small>As worn in the Unicorn Tapestries.</small></span><span class="track" aria-hidden="true"></span></label>
+                  <label class="switch"><input type="checkbox" name="bow"><span class="switch-text"><strong>Tail bow</strong><small>For formal occasions.</small></span><span class="track" aria-hidden="true"></span></label>
+                </fieldset>
+                <div class="control">
+                  <label class="control-title" for="sparkle-level">Sparkle <output for="sparkle-level" data-value="sparkle"></output></label>
+                  <input class="range" id="sparkle-level" type="range" min="0" max="5" step="1" name="sparkle">
+                  <div class="range-scale" aria-hidden="true"><span>Discreet</span><span>Maximum</span></div>
+                </div>
+              </div>
+
+              <div class="panel-section" role="tabpanel" id="panel-scene" aria-labelledby="tab-scene" hidden>
+                <fieldset class="control">
+                  <legend>Scene</legend>
+                  <div class="tiles" data-options="scene"></div>
+                </fieldset>
+              </div>
+            </form>
+
+            <div class="panel-body" style="padding-top: 0">
+              <section class="profile" aria-labelledby="passport-title">
+                <h3 id="passport-title">Unicorn passport</h3>
+                <dl data-profile></dl>
+              </section>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stable -->
+        <section class="stable-section" aria-labelledby="stable-title">
+          <div class="section-head" style="margin-bottom: 28px">
+            <p class="eyebrow">Your stable</p>
+            <h2 id="stable-title">The stable</h2>
+            <p class="lede">Unicorns you save are kept here, in this browser, until you set them free.</p>
+          </div>
+          <div class="stable-grid" data-stable></div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <canvas class="starfield" data-starfield data-density=".7" data-meteors="false" data-seed="footer"></canvas>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="bm-f" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+              <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-f)"/>
+              <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+            </svg>
+            <span class="brand-name">Unicornis</span>
+          </a>
+          <p>A field guide to the world's most elusive creature. Leaving hoofprints in the dew since about 2600 BCE.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="legends.html">Legends through the ages</a></li>
+            <li><a href="bestiary.html">The Bestiary</a></li>
+            <li><a href="atelier.html">The Atelier</a></li>
+            <li><a href="sky.html">The Unicorn in the Sky</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Good to know</h2>
+          <ul>
+            <li><a href="index.html#faq">Unicorn FAQ</a></li>
+            <li><a href="bestiary.html#quiz">Which unicorn are you?</a></li>
+            <li><a href="legends.html#hoax">The great horn hoax</a></li>
+            <li><a href="sky.html#find">How to find Monoceros</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>No unicorns were harmed (or, admittedly, found) in the making of this website.</p>
+        <p>Psst: type <kbd>unicorn</kbd> anywhere on the page.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/horns.js"></script>
+  <script src="js/unicorn-art.js"></script>
+  <script src="js/atelier.js"></script>
+</body>
+</html>

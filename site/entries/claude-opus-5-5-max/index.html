@@ -1,0 +1,412 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Unicornis · A field guide to unicorns</title>
+  <meta name="description" content="Everything about the world's most elusive creature: 4,500 years of unicorn history, unicorns of myth and nature, a build-your-own unicorn studio and the unicorn constellation.">
+  <meta name="theme-color" content="#0e0a2b">
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,400..800,0..100,0..1;1,9..144,400..800,0..100,0..1&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+          <defs><linearGradient id="bm-h" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+          <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-h)"/>
+          <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+          <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+        </svg>
+        <span class="brand-name">Unicornis</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-nav-toggle>
+        <span class="visually-hidden">Menu</span>
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="legends.html">Legends</a></li>
+          <li><a href="bestiary.html">Bestiary</a></li>
+          <li><a href="atelier.html">Atelier</a></li>
+          <li><a href="sky.html">Night Sky</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============ Hero ============ -->
+    <section class="hero on-dark" aria-labelledby="hero-title">
+      <canvas class="starfield" data-starfield data-density="1.25" data-horizon="true" data-seed="home-hero"></canvas>
+      <div class="hero-moon" aria-hidden="true"></div>
+      <div class="fireflies" aria-hidden="true" data-fireflies></div>
+      <svg class="hero-hills" viewBox="0 0 1440 320" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+        <defs>
+          <linearGradient id="hill-a" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3d2b80"/><stop offset="1" stop-color="#24185a"/></linearGradient>
+          <linearGradient id="hill-b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1d64"/><stop offset="1" stop-color="#170f42"/></linearGradient>
+        </defs>
+        <path d="M0 150 C180 104 360 96 560 134 S920 196 1120 136 S1360 92 1440 108 L1440 320 L0 320 Z" fill="url(#hill-a)" opacity=".85"/>
+        <path d="M0 214 C220 172 430 166 650 200 S1050 244 1270 196 S1400 182 1440 186 L1440 320 L0 320 Z" fill="url(#hill-b)"/>
+        <path d="M0 214 C220 172 430 166 650 200 S1050 244 1270 196 S1400 182 1440 186" fill="none" stroke="#5b47b0" stroke-width="2" opacity=".6"/>
+        <path d="M0 284 C260 254 520 250 780 272 S1200 300 1440 266 L1440 320 L0 320 Z" fill="#fbf8ff"/>
+      </svg>
+
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">A field guide to the world's most elusive creature</p>
+          <h1 class="hero-title" id="hero-title"><span class="text-iris">Unicornis</span></h1>
+          <p class="hero-sub">Four and a half thousand years of horns, hooves and wonder, from Bronze Age seals to the winter sky.</p>
+          <div class="hero-actions">
+            <a class="btn btn--primary" href="bestiary.html" data-sparkle>
+              Meet the herd
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="atelier.html">Build a unicorn</a>
+          </div>
+        </div>
+        <div class="hero-art" data-hero-art>
+          <div class="halo" aria-hidden="true"></div>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#intro"><span class="mouse" aria-hidden="true"></span>Scroll</a>
+    </section>
+
+    <!-- ============ What is a unicorn ============ -->
+    <section class="section section--pearl" id="intro" aria-labelledby="intro-title">
+      <div class="container">
+        <div class="intro-grid">
+          <div class="etym" data-reveal>
+            <p class="eyebrow" style="color: var(--butter)">Where the word comes from</p>
+            <div class="etym-parts">
+              <div><span class="etym-word">unus</span><span class="etym-gloss">Latin, "one"</span></div>
+              <span class="etym-op" aria-hidden="true">+</span>
+              <div><span class="etym-word">cornu</span><span class="etym-gloss">Latin, "horn"</span></div>
+            </div>
+            <div class="etym-result">
+              <span class="etym-word iris">unicornis</span>
+              <span class="etym-gloss">"one-horned"</span>
+            </div>
+            <p class="etym-note">The Greeks said <em>monókerōs</em>, which is where the unicorn constellation, <em>Monoceros</em>, gets its name.</p>
+          </div>
+
+          <div data-reveal style="--reveal-delay: .12s">
+            <p class="eyebrow">What is a unicorn?</p>
+            <h2 id="intro-title">One horn, a thousand stories</h2>
+            <p class="lede">A unicorn is a creature with a single horn on its forehead. That is the whole definition, and somehow it has been enough to fill four and a half millennia of art, science, faith and fantasy.</p>
+            <p>It has been a wild ass in India, a fearsome monster in Rome, a symbol of purity in medieval Europe, an omen of wise rulers in China, the national animal of Scotland and, lately, a billion-dollar startup. Real animals, from rhinos to narwhals, kept the legend alive, and travelers kept getting the details gloriously wrong.</p>
+            <p class="mb-0">This website gathers the whole herd: the history, the creatures, the science and the sparkle.</p>
+          </div>
+        </div>
+
+        <ul class="stats" role="list">
+          <li class="stat" data-reveal><span class="stat-num" data-count="4500" data-suffix="+">4,500+</span><span class="stat-label">years of one-horned creatures in human art</span></li>
+          <li class="stat" data-reveal style="--reveal-delay: .08s"><span class="stat-num" data-count="9">9</span><span class="stat-label">mentions of unicorns in the King James Bible</span></li>
+          <li class="stat" data-reveal style="--reveal-delay: .16s"><span class="stat-num" data-count="1">1</span><span class="stat-label">country with a unicorn as its national animal</span></li>
+          <li class="stat" data-reveal style="--reveal-delay: .24s"><span class="stat-num" data-count="0">0</span><span class="stat-label">confirmed sightings (so far)</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ Six true things ============ -->
+    <section class="section section--white" aria-labelledby="truths-title">
+      <div class="container">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Surprising but true</p>
+          <h2 id="truths-title">Six true facts about an imaginary animal</h2>
+          <p class="lede">Unicorns may not exist, but their paper trail is very real.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card card--hover fact-card" data-reveal>
+            <div class="fact-icon" style="--tint: #e3edff">
+              <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><rect x="6" y="11" width="36" height="26" rx="4" fill="#2f6fd6"/><path d="M10 15 L38 33 M38 15 L10 33" stroke="#fff" stroke-width="5" stroke-linecap="round"/></svg>
+            </div>
+            <h3>Scotland's national animal is a unicorn</h3>
+            <p>Unicorns have guarded the Scottish royal arms since the Middle Ages. Since 1603 the royal coat of arms has paired the English lion with a Scottish unicorn, which is traditionally shown in chains.</p>
+            <a class="more" href="legends.html#e-1603">Why the chains?</a>
+          </article>
+
+          <article class="card card--hover fact-card" data-reveal style="--reveal-delay: .08s">
+            <div class="fact-icon" style="--tint: #e2f3ff">
+              <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M36.5 25.5 L46 14.5" stroke="#d9cdb2" stroke-width="2.8" stroke-linecap="round"/><path d="M7 30 C7 22.5 15 18.5 23.5 19.2 C30.5 19.8 35.5 22.5 37.5 26.5 C38.6 29.6 36.4 32.6 32 33.6 C26 34.8 17.5 34.8 12.5 33.8 C9 33.1 7 31.8 7 30 Z" fill="#6f9fd3"/><path d="M8 30 C5.5 26.5 3 26.5 2 28.5 C3 29.8 4.5 30.6 6.5 31 C4.5 32 3 33.4 3.5 35.2 C5.5 35.2 7.5 33.6 9 31.8 Z" fill="#6f9fd3"/><circle cx="31" cy="26" r="1.4" fill="#1d1642"/><path d="M13 32.2 C18 30.8 25 30.8 30 32" stroke="#fff" stroke-opacity=".55" stroke-width="1.5" fill="none" stroke-linecap="round"/><circle cx="16" cy="24" r="1.2" fill="#fff" opacity=".5"/><circle cx="21" cy="22.5" r="1" fill="#fff" opacity=".5"/></svg>
+            </div>
+            <h3>Renaissance "unicorn horns" were narwhal tusks</h3>
+            <p>Traded down from the Arctic, the spiral tusks sold for more than their weight in gold. Kings drank from them, hoping to foil poisoners.</p>
+            <a class="more" href="legends.html#hoax">The great horn hoax</a>
+          </article>
+
+          <article class="card card--hover fact-card" data-reveal style="--reveal-delay: .16s">
+            <div class="fact-icon" style="--tint: #f3ece2">
+              <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M5 35 C5 27 10 22.5 17 21.5 C21 21 23.5 19.5 25 17 C28 22 33 25.5 39 27.5 C43.5 29 44 34 40 36 C32 38.5 17 38.6 9.5 37.6 C6.6 37.2 5 36.5 5 35 Z" fill="#b49270"/><path d="M22 19.5 C21 11 25 5 32 2.5 C31.5 9.5 30 14.5 27.5 18.5" fill="none" stroke="#7a5f43" stroke-width="1.8" stroke-dasharray="2.6 2.2" stroke-linecap="round"/><circle cx="31" cy="28.5" r="1.4" fill="#2b2155"/><path d="M9 23 C7.5 19.5 8.5 16.5 11 15.5" stroke="#b49270" stroke-width="3" stroke-linecap="round" fill="none"/><path d="M12 36.5 L12 42 M20 37.2 L20 42.5 M30 37 L30 42" stroke="#8d7458" stroke-width="3" stroke-linecap="round"/></svg>
+            </div>
+            <h3>A real "Siberian unicorn" met early humans</h3>
+            <p><i>Elasmotherium</i>, a giant rhinoceros with an enormous dome on its forehead, grazed the steppe until at least 39,000 years ago.</p>
+            <a class="more" href="bestiary.html#beast-elasmotherium">Meet Elasmotherium</a>
+          </article>
+
+          <article class="card card--hover fact-card" data-reveal>
+            <div class="fact-icon" style="--tint: #fbf1d9">
+              <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><circle cx="24" cy="24" r="17" fill="none" stroke="#c98f1f" stroke-width="2.5"/><path d="M9 24 L24 21 L39 24 L24 27 Z" fill="#c98f1f" opacity=".5"/><path d="M24 8 L28 24 L24 40 L20 24 Z" fill="#e3b552"/><path d="M24 8 L28 24 L20 24 Z" fill="#c0392b"/><circle cx="24" cy="24" r="2.4" fill="#fff"/></svg>
+            </div>
+            <h3>Marco Polo found unicorns, and was not impressed</h3>
+            <p>On Sumatra in the 1290s he met "unicorns" that wallowed in mud, each one "a passing ugly beast to look upon". They were rhinoceroses.</p>
+            <a class="more" href="legends.html#e-polo">Read the review</a>
+          </article>
+
+          <article class="card card--hover fact-card" data-reveal style="--reveal-delay: .08s">
+            <div class="fact-icon" style="--tint: #ddf6ea">
+              <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M10 15 L30 15 L41 24 L30 33 L10 33 Q6.5 33 6.5 29.5 L6.5 18.5 Q6.5 15 10 15 Z" fill="#fff" stroke="#3f8a63" stroke-width="2.2" stroke-linejoin="round"/><circle cx="33.5" cy="24" r="2.2" fill="none" stroke="#3f8a63" stroke-width="2"/><path d="M11.5 21 H25 M11.5 27 H21" stroke="#3f8a63" stroke-width="2.2" stroke-linecap="round"/><path d="M35.7 24 C40.5 22 43.5 17 42.5 11" stroke="#3f8a63" stroke-width="1.6" fill="none" stroke-linecap="round"/></svg>
+            </div>
+            <h3>The Indian rhino is officially a unicorn</h3>
+            <p>Its scientific name, given by Carl Linnaeus in 1758, is <i>Rhinoceros unicornis</i>: the "one-horned nose-horn".</p>
+            <a class="more" href="bestiary.html#beast-rhino">See the rhino</a>
+          </article>
+
+          <article class="card card--hover fact-card" data-reveal style="--reveal-delay: .16s">
+            <div class="fact-icon" style="--tint: #ece6ff">
+              <svg viewBox="0 0 48 48" aria-hidden="true" focusable="false"><path d="M7 35 L17 27 L27 31 L38 15 M27 31 L33 40" stroke="#8f7bf0" stroke-width="1.6" fill="none" stroke-linecap="round"/><g fill="#4b31b8"><circle cx="7" cy="35" r="2.4"/><circle cx="17" cy="27" r="2"/><circle cx="27" cy="31" r="2.6"/><circle cx="38" cy="15" r="3"/><circle cx="33" cy="40" r="2"/></g><path d="M40 3 C40.4 6.5 41.6 7.7 45 8 C41.6 8.3 40.4 9.5 40 13 C39.6 9.5 38.4 8.3 35 8 C38.4 7.7 39.6 6.5 40 3 Z" fill="#e3b552"/></svg>
+            </div>
+            <h3>There is a unicorn in the winter sky</h3>
+            <p>Monoceros, a faint constellation charted in the early 1600s, lies largely inside the Winter Triangle of Betelgeuse, Sirius and Procyon.</p>
+            <a class="more" href="sky.html">Find it tonight</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Explore ============ -->
+    <section class="section section--pearl" aria-labelledby="explore-title">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Explore</p>
+          <h2 id="explore-title">Wander the realm</h2>
+          <p class="lede">Four corners of the unicorn world, each with something to read, play with or look up at.</p>
+        </div>
+
+        <div class="explore-grid">
+          <a class="explore-card explore-card--wide" href="legends.html" data-reveal>
+            <div class="art" aria-hidden="true">
+              <svg viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <defs>
+                  <pattern id="ex-mf" width="44" height="44" patternUnits="userSpaceOnUse">
+                    <path d="M6 10 q3 -6 6 0 q-3 6 -6 0z M26 32 q3 -6 6 0 q-3 6 -6 0z" fill="#2f7356"/>
+                    <g fill="#f4e9d0"><circle cx="12" cy="8" r="1.8"/><circle cx="15" cy="10" r="1.8"/><circle cx="13" cy="13" r="1.8"/><circle cx="10" cy="12" r="1.8"/></g>
+                    <g fill="#d9534f"><circle cx="33" cy="26" r="2"/><circle cx="36" cy="29" r="2"/><circle cx="33" cy="32" r="2"/><circle cx="30" cy="29" r="2"/></g>
+                    <circle cx="38" cy="9" r="1.6" fill="#e9a6c9"/><circle cx="17" cy="36" r="1.6" fill="#9cc7e8"/>
+                  </pattern>
+                </defs>
+                <rect width="700" height="400" fill="#173a2c"/>
+                <rect width="700" height="400" fill="url(#ex-mf)" opacity=".85"/>
+                <rect x="24" y="24" width="652" height="352" fill="none" stroke="#e3b552" stroke-width="2" opacity=".7"/>
+              </svg>
+              <svg class="art-timeline" viewBox="30 100 570 70" preserveAspectRatio="xMinYMid meet" focusable="false">
+                <path d="M66 156 H574" stroke="#e3b552" stroke-width="2" stroke-dasharray="3 6"/>
+                <g fill="#173a2c" stroke="#e3b552" stroke-width="2.5">
+                  <circle cx="90" cy="156" r="8"/><circle cx="210" cy="156" r="8"/><circle cx="330" cy="156" r="8"/><circle cx="450" cy="156" r="8"/><circle cx="560" cy="156" r="8"/>
+                </g>
+                <g fill="#f5d98f" font-family="Fraunces, Georgia, serif" font-size="20" font-weight="600" text-anchor="middle">
+                  <text x="90" y="128">2600 BCE</text><text x="210" y="128">77 CE</text><text x="330" y="128">1500</text><text x="450" y="128">1638</text><text x="560" y="128">2013</text>
+                </g>
+              </svg>
+            </div>
+            <span class="go" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="kicker">Timeline</span>
+            <h3>Legends through the ages</h3>
+            <p>From Indus seals and Roman encyclopedias to medieval tapestries, poison-proof cups and the startup boom.</p>
+          </a>
+
+          <a class="explore-card explore-card--narrow" href="bestiary.html" data-reveal style="--reveal-delay: .08s">
+            <div class="art" aria-hidden="true" data-explore-horns style="background: radial-gradient(circle at 50% 30%, #4a3a9c, #1b1448 75%)"></div>
+            <span class="go" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="kicker">Field guide</span>
+            <h3>The Bestiary</h3>
+            <p>Fourteen unicorns of myth and nature, and a quiz to find out which one you are.</p>
+          </a>
+
+          <a class="explore-card explore-card--narrow" href="atelier.html" data-reveal>
+            <div class="art art--unicorn" aria-hidden="true" data-explore-unicorn></div>
+            <span class="go" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="kicker">Studio</span>
+            <h3>The Atelier</h3>
+            <p>Design your own unicorn, give it a name and keep it in your stable.</p>
+          </a>
+
+          <a class="explore-card explore-card--wide" href="sky.html" data-reveal style="--reveal-delay: .08s">
+            <div class="art" aria-hidden="true">
+              <svg viewBox="0 0 700 400" preserveAspectRatio="xMidYMid slice" focusable="false">
+                <defs>
+                  <radialGradient id="ex-neb" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ff8cc6" stop-opacity=".0"/><stop offset=".55" stop-color="#ff8cc6" stop-opacity=".35"/><stop offset="1" stop-color="#ff8cc6" stop-opacity="0"/></radialGradient>
+                  <radialGradient id="ex-glow"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#c3a5ff" stop-opacity="0"/></radialGradient>
+                </defs>
+                <rect width="700" height="400" fill="#07051c"/>
+                <circle cx="420" cy="150" r="60" fill="url(#ex-neb)"/>
+                <g fill="#fff" opacity=".55">
+                  <circle cx="40" cy="60" r="1"/><circle cx="120" cy="210" r="1.2"/><circle cx="210" cy="40" r="1"/><circle cx="300" cy="300" r="1.1"/><circle cx="520" cy="60" r="1"/><circle cx="640" cy="230" r="1.2"/><circle cx="600" cy="330" r="1"/><circle cx="160" cy="330" r="1"/><circle cx="360" cy="40" r="1"/><circle cx="660" cy="90" r="1.1"/><circle cx="80" cy="140" r="1"/><circle cx="250" cy="150" r="1"/>
+                </g>
+                <path d="M592 96 L548 150 L470 190 L336 236 L130 268 M336 236 L380 298 L556 334 L630 320 M130 268 L246 352" stroke="#c3a5ff" stroke-width="2" fill="none" opacity=".8"/>
+                <path d="M660 60 L250 110 L470 382 Z" stroke="#ffe29a" stroke-width="1.5" stroke-dasharray="2 7" fill="none" opacity=".7" stroke-linecap="round"/>
+                <g>
+                  <circle cx="592" cy="96" r="12" fill="url(#ex-glow)"/><circle cx="592" cy="96" r="2.6" fill="#fff"/>
+                  <circle cx="548" cy="150" r="10" fill="url(#ex-glow)"/><circle cx="548" cy="150" r="2.4" fill="#fff"/>
+                  <circle cx="470" cy="190" r="12" fill="url(#ex-glow)"/><circle cx="470" cy="190" r="2.6" fill="#fff"/>
+                  <circle cx="336" cy="236" r="12" fill="url(#ex-glow)"/><circle cx="336" cy="236" r="2.8" fill="#fff"/>
+                  <circle cx="130" cy="268" r="11" fill="url(#ex-glow)"/><circle cx="130" cy="268" r="2.6" fill="#fff"/>
+                  <circle cx="380" cy="298" r="10" fill="url(#ex-glow)"/><circle cx="380" cy="298" r="2.2" fill="#fff"/>
+                  <circle cx="556" cy="334" r="12" fill="url(#ex-glow)"/><circle cx="556" cy="334" r="2.8" fill="#fff"/>
+                  <circle cx="630" cy="320" r="11" fill="url(#ex-glow)"/><circle cx="630" cy="320" r="2.6" fill="#fff"/>
+                  <circle cx="246" cy="352" r="11" fill="url(#ex-glow)"/><circle cx="246" cy="352" r="2.8" fill="#fff"/>
+                  <circle cx="660" cy="60" r="16" fill="url(#ex-glow)"/><circle cx="660" cy="60" r="4" fill="#ffc9a8"/>
+                  <circle cx="250" cy="110" r="16" fill="url(#ex-glow)"/><circle cx="250" cy="110" r="4" fill="#fff6e0"/>
+                  <circle cx="470" cy="382" r="18" fill="url(#ex-glow)"/><circle cx="470" cy="382" r="4.6" fill="#eef4ff"/>
+                </g>
+              </svg>
+            </div>
+            <span class="go" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24"><path d="M5 12h13M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+            <span class="kicker">Stargazing</span>
+            <h3>The Unicorn in the Sky</h3>
+            <p>Explore Monoceros, its nebulae and star clusters, and trace your own unicorn among the stars.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Oracle ============ -->
+    <section class="section section--night on-dark" aria-labelledby="oracle-title">
+      <canvas class="starfield" data-starfield data-density=".55" data-meteors="false" data-seed="oracle"></canvas>
+      <div class="container oracle">
+        <div class="oracle-orb-wrap" data-reveal>
+          <button class="oracle-orb" type="button" data-oracle-btn data-sparkle aria-controls="oracle-fact">
+            <svg class="orb-horn" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="#fff" fill-opacity=".92"/>
+              <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#6a4ce0" stroke-opacity=".55" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+            </svg>
+            <span class="orb-label">Tap for a fact</span>
+          </button>
+        </div>
+        <div data-reveal style="--reveal-delay: .1s">
+          <p class="eyebrow">The oracle</p>
+          <h2 id="oracle-title">Ask the crystal orb</h2>
+          <div class="oracle-card">
+            <p class="oracle-count" data-oracle-count>27 true facts inside</p>
+            <p class="oracle-fact" id="oracle-fact" data-oracle-fact aria-live="polite">The orb knows things. Tap it, and it will tell you something true about unicorns.</p>
+            <p class="oracle-source" data-oracle-more>Every fact links to the page where you can learn more.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section--pearl" id="faq" aria-labelledby="faq-title">
+      <div class="container--narrow">
+        <div class="section-head section-head--center" data-reveal>
+          <p class="eyebrow">Questions</p>
+          <h2 id="faq-title">Frequently asked questions</h2>
+          <p class="lede">Asked by humans, answered as honestly as a unicorn website can manage.</p>
+        </div>
+
+        <div class="faq" data-reveal>
+          <details class="faq-item">
+            <summary>Are unicorns real?</summary>
+            <div class="faq-body">
+              <p>No living unicorn has ever been documented by science. But the legend is very real, and so are the animals that fed it: the Indian rhinoceros, the narwhal, the oryx and the extinct "Siberian unicorn", <i>Elasmotherium</i>. You can meet all of them in the <a href="bestiary.html">Bestiary</a>.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Why is the Scottish unicorn wearing a chain?</summary>
+            <div class="faq-body">
+              <p>Heraldic unicorns are traditionally shown chained. The usual explanation is that a free unicorn was considered the wildest and proudest of beasts, so a chained one showed the power of the king who could tame it.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What is the difference between a unicorn, a pegasus and an alicorn?</summary>
+            <div class="faq-body">
+              <p>A unicorn has a horn. A pegasus has wings, after Pegasus, the winged horse of Greek myth. An <em>alicorn</em> originally meant the unicorn's horn itself (from the Italian <em>alicorno</em>); calling a winged unicorn an alicorn is a modern fantasy usage. In the <a href="atelier.html">Atelier</a> you can build either kind.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What is a unicorn horn made of?</summary>
+            <div class="faq-body">
+              <p>In legend, a substance that neutralizes poison. In the treasure chambers of Renaissance Europe, ivory from narwhal tusks, which are teeth. A rhinoceros horn, by contrast, is made of keratin, the same material as your fingernails.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>What do unicorns eat?</summary>
+            <div class="faq-body">
+              <p>Medieval bestiaries are silent on the matter; they were more interested in how to catch one. Modern sources overwhelmingly suggest rainbows and marshmallows, a theory that remains un-peer-reviewed.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Why are billion-dollar startups called unicorns?</summary>
+            <div class="faq-body">
+              <p>Venture capitalist Aileen Lee coined the term in 2013 for privately held startups valued at over a billion dollars, because back then they were about as rare as the real thing.</p>
+            </div>
+          </details>
+          <details class="faq-item">
+            <summary>Is there a day for unicorns?</summary>
+            <div class="faq-body">
+              <p>In the United States, April 9 is celebrated as National Unicorn Day. In Scotland, of course, every day is unicorn day.</p>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer on-dark">
+    <canvas class="starfield" data-starfield data-density=".7" data-meteors="false" data-seed="footer"></canvas>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" focusable="false">
+              <defs><linearGradient id="bm-f" x1="10" y1="40" x2="38" y2="8" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff9ccf"/><stop offset=".35" stop-color="#c3a5ff"/><stop offset=".68" stop-color="#8fd2ff"/><stop offset="1" stop-color="#ffe49c"/></linearGradient></defs>
+              <path d="M9.3 32.3 L36 8 L18.7 39.7 Q12.2 39.6 9.3 32.3 Z" fill="url(#bm-f)"/>
+              <path d="M22.2 33.4 L17.3 25 M26.5 25.4 L24 18.9 M30.5 18.2 L30.1 13.3" stroke="#120d36" stroke-opacity=".4" stroke-width="1.6" stroke-linecap="round" fill="none"/>
+              <path d="M12 6 C12.4 9 13.6 10.2 16.5 10.5 C13.6 10.8 12.4 12 12 15 C11.6 12 10.4 10.8 7.5 10.5 C10.4 10.2 11.6 9 12 6 Z" fill="#fff"/>
+            </svg>
+            <span class="brand-name">Unicornis</span>
+          </a>
+          <p>A field guide to the world's most elusive creature. Leaving hoofprints in the dew since about 2600 BCE.</p>
+        </div>
+        <div class="footer-col">
+          <h2>Explore</h2>
+          <ul>
+            <li><a href="legends.html">Legends through the ages</a></li>
+            <li><a href="bestiary.html">The Bestiary</a></li>
+            <li><a href="atelier.html">The Atelier</a></li>
+            <li><a href="sky.html">The Unicorn in the Sky</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h2>Good to know</h2>
+          <ul>
+            <li><a href="index.html#faq">Unicorn FAQ</a></li>
+            <li><a href="bestiary.html#quiz">Which unicorn are you?</a></li>
+            <li><a href="legends.html#hoax">The great horn hoax</a></li>
+            <li><a href="sky.html#find">How to find Monoceros</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>No unicorns were harmed (or, admittedly, found) in the making of this website.</p>
+        <p>Psst: type <kbd>unicorn</kbd> anywhere on the page.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/site.js"></script>
+  <script src="js/horns.js"></script>
+  <script src="js/unicorn-art.js"></script>
+  <script src="js/data-beasts.js"></script>
+  <script src="js/home.js"></script>
+</body>
+</html>
