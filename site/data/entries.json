@@ -41,6 +41,42 @@
       ]
     },
     {
+      "id": "gpt-6-2-astra-max",
+      "title": "Astra 6.2 · max",
+      "maker": "OpenAI",
+      "date": "2026-11-24",
+      "page": "entries/gpt-6-2-astra-max/index.html",
+      "variants": [],
+      "conditions": {
+        "Where it runs": "Cloud (OpenAI API)",
+        "Interface": "Codex CLI 0.170.0, `codex exec`, sandbox workspace-write, empty folder",
+        "Model": "gpt-6.2-astra",
+        "Quantization": "n/a (hosted)",
+        "Hardware": "n/a (hosted)",
+        "Context window": "n/a (hosted)",
+        "Reasoning effort": "max",
+        "Strategy": "One prompt; the agent was free to use its tools (shell, built-in ImageGen, local preview and screenshots)"
+      },
+      "metrics": {
+        "requests": 1,
+        "totalSeconds": 1253,
+        "generatedTokens": 45994,
+        "generatedTokensNote": "Output tokens, of which 17,874 reasoning; plus 2.77M input tokens across tool turns (2.67M cached)",
+        "tokensPerSecond": null,
+        "lines": 1027,
+        "failedAttempts": 0
+      },
+      "steps": [
+        { "name": "One prompt, agentic run (75 tool items)", "prompt": "base-prompt.txt", "answer": "entries/gpt-6-2-astra-max/answer.md", "seconds": 1253, "tokens": 45994, "tokensPerSecond": null, "finish": "stop" }
+      ],
+      "notes": [
+        "Built a multi-file site, “Unicorn Atlas”: index.html, styles.css and atlas.js (1,027 lines in total), seven illustrations made with its built-in ImageGen, self-hosted fonts and a small Node build script. The published copy is its dist/ build.",
+        "The image prompts it wrote are in assets/artwork.json. Six species can be filtered by realm, there is original folklore, and favourites are saved in a journal in the browser.",
+        "It checked its own work: it served the site locally and took desktop, tablet and mobile screenshots before finishing. Codex's policy blocked two clean-up commands at the end, with no effect on the site.",
+        "Unlike the other entries this was a full agent run with tools, so time and tokens include building, image generation and testing; speed in tok/s is not comparable and is left out."
+      ]
+    },
+    {
       "id": "inkling-2-mini-q4km",
       "title": "Inkling 2 Mini · Q4_K_M",
       "maker": "Thinking Machines Lab",
