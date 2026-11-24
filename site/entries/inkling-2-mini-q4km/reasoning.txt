@@ -1,0 +1,6 @@
+The user asks to make a website dedicated to unicorns. Need interpret: likely wants HTML/CSS/JS code or design plan. We can provide a simple website code snippet (single HTML file) with magical unicorn theme. Need final answer include concise explanation and code. Since no tools for web building beyond text, create standalone HTML. Need be careful not overclaim. Provide code that can be saved as unicorn-website.html. Include sections: hero, features, magical facts, contact/letter signup. Include CSS gradient, animated stars maybe. Keep moderate length. Mention save as .html and open in browser. Ensure no external dependencies? Could use inline SVG unicorn? Simple stylized unicorn with CSS easier. We can include basic SVG silhouette maybe. Need final only. Good.
+
+Construct code:
+<!doctype html>... style: background linear-gradient(#ffe9ff,#d8f3ff); fonts; hero card; unicorn emoji? Avoid emoji maybe use SVG. Sections: About, Myth, Magic, Join. Light pastel. Add JS for animated stars? Keep simple.
+
+Provide caveat that it's a fictional/whimsical site. Include full code in markdown. That may be long but acceptable. Need not include actual deployment. Maybe include optional GitHub Pages steps brief. Final concise with code.

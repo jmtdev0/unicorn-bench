@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Entry · Unicorn Bench</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header site-header--small">
+  <div class="container">
+    <p class="eyebrow"><a href="./">← Unicorn Bench</a></p>
+    <h1 id="entry-title">Loading…</h1>
+    <p class="lead" id="entry-maker"></p>
+    <p class="actions" id="entry-actions"></p>
+  </div>
+</header>
+
+<main class="container">
+  <div class="detail-grid">
+    <section aria-labelledby="cond-title">
+      <h2 id="cond-title">Conditions</h2>
+      <dl class="facts" id="entry-conditions"></dl>
+    </section>
+    <section aria-labelledby="metrics-title">
+      <h2 id="metrics-title">Metrics</h2>
+      <dl class="facts" id="entry-metrics"></dl>
+    </section>
+  </div>
+
+  <section aria-labelledby="process-title">
+    <h2 id="process-title">Process</h2>
+    <p class="muted">Each step lists the prompt the model received and, when kept, its answer. Click a step to read it.</p>
+    <div class="table-scroll">
+      <table class="compare" id="steps-table">
+        <thead><tr><th scope="col">Step</th><th scope="col">Time</th><th scope="col">Tokens</th><th scope="col">Speed</th><th scope="col">Finished by</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div id="steps-detail"></div>
+  </section>
+
+  <section aria-labelledby="notes-title">
+    <h2 id="notes-title">Notes</h2>
+    <ul class="notes" id="entry-notes"></ul>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container"><p>Part of <strong>AI SLOP</strong> — AI, art, and feelings holding hands.</p></div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

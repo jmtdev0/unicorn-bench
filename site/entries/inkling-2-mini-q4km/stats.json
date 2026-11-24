@@ -1,0 +1,13 @@
+{
+  "effort": "medium",
+  "wall_seconds": 133,
+  "prompt_tokens": 12,
+  "generated_tokens": 1614,
+  "tokens_per_second": 12.2,
+  "prompt_per_second": 17.0,
+  "finish": "stop",
+  "reasoning_chars": 1237,
+  "answer_chars": 3336,
+  "html_blocks": 1,
+  "page_lines": 51
+}

@@ -1,0 +1,62 @@
+Sure—here’s a whimsical, standalone “Unicorn Website” you can save as `unicorn.html` and open in a browser.
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Stardust Meadow — A Unicorn Website</title>
+<style>
+  :root { --pink:#ffc8ec; --blue:#c9e8ff; --gold:#ffe08a; --ink:#3b315a; }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; font-family: Georgia, serif; color: var(--ink);
+    background: radial-gradient(circle at top left, #fff6fb 0, var(--pink) 35%, var(--blue) 75%, #e9f8e9 100%);
+    min-height: 100vh;
+  }
+  header { text-align:center; padding: 3rem 1rem 1.5rem; }
+  .moon { font-size: 4rem; }
+  h1 { font-size: clamp(2.5rem, 8vw, 5rem); line-height: 1; margin: .5rem 0; letter-spacing: -0.04em; }
+  .tagline { font-size: clamp(1.1rem, 3vw, 1.5rem); opacity: .85; }
+  .card { max-width: 980px; margin: 0 auto 2rem; padding: 2rem; background: rgba(255,255,255,.65); border: 1px solid rgba(255,255,255,.9); border-radius: 28px; box-shadow: 0 20px 60px rgba(91,65,130,.15); backdrop-filter: blur(8px); }
+  .grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+  .tile { padding: 1rem 1.1rem; border-radius: 20px; background: rgba(255,255,255,.72); }
+  .sparkle { color:#b85fd6; font-weight:bold; }
+  a.button { display:inline-block; text-decoration:none; margin-top: 1rem; padding: .9rem 1.4rem; border-radius: 999px; background: linear-gradient(90deg, #ff8fd1, #8fd3ff); color: white; font-weight:700; box-shadow: 0 10px 25px rgba(184,95,214,.35); }
+  footer { text-align:center; padding: 2rem; font-size: .9rem; opacity: .75; }
+</style>
+</head>
+<body>
+  <header>
+    <div class="moon">✦</div>
+    <h1>Stardust Meadow</h1>
+    <p class="tagline">A quiet place for the magical, gentle, and slightly fabulous.</p>
+    <a class="button" href="#visit">Visit the Meadow</a>
+  </header>
+
+  <main class="card" id="visit">
+    <h2>Welcome to the Unicorn Sanctuary</h2>
+    <p>This is a fictional website for celebrating unicorns: mythic creatures often associated with calm, wonder, change, and hope. Explore a small world of glitter, gentle music, and friendly magic.</p>
+
+    <div class="grid">
+      <section class="tile"><h3>🌈 Myth</h3><p>Unicorns appear in storytelling as rare beings that bring beauty, truth, and transformation.</p></section>
+      <section class="tile"><h3>✨ Wonder</h3><p>Every rainbow pause is a reminder to notice beauty, curiosity, and kindness.</p></section>
+      <section class="tile"><h3>🌙 Calm</h3><p>Create a ritual: breathe slowly, step outside, or stare at the moon.</p></section>
+      <section class="tile"><h3>🦋 Change</h3><p>Growth is like a horn growing slowly: quiet at first, then visible.</p></section>
+    </div>
+  </main>
+
+  <footer>
+    Made with sparkles • A whimsical/fictional site, not an actual unicorn refuge.
+  </footer>
+</body>
+</html>
+```
+
+To use it:
+1. Save the code as `unicorn.html`.
+2. Double-click the file to open it in a browser.
+3. Optional later upgrades: add animated stars, a unicorn SVG, a “visitor constellation,” or deploy it via GitHub Pages/Netlify/Vercel.
+
+If you want, I can also turn it into a design mockup for a real brand, a React/Vite app, or a more elaborate animated page with a custom SVG unicorn.

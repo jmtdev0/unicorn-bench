@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Unicorn Bench</title>
+<meta name="description" content="A catalog of unicorn web pages built by different AI models, with the conditions, timings and prompts behind each one.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <p class="eyebrow">AI SLOP · experiment</p>
+    <h1>Unicorn Bench 🦄</h1>
+    <p class="lead" id="task-summary">Loading…</p>
+    <p class="task-prompt"><a id="base-prompt" href="#">Read the base prompt</a></p>
+  </div>
+</header>
+
+<main class="container">
+  <section aria-labelledby="compare-title">
+    <h2 id="compare-title">At a glance</h2>
+    <div class="table-scroll">
+      <table class="compare" id="compare-table">
+        <thead><tr><th scope="col">Model</th><th scope="col">Where</th><th scope="col">Reasoning effort</th><th scope="col">Requests</th><th scope="col">Total time</th><th scope="col">Tokens</th><th scope="col">Speed</th><th scope="col">Lines</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section aria-labelledby="catalog-title">
+    <h2 id="catalog-title">The pages</h2>
+    <div class="catalog" id="catalog"></div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>Part of <strong>AI SLOP</strong> — AI, art, and feelings holding hands.</p>
+  </div>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+{
+  "task": {
+    "title": "Make a website dedicated to unicorns",
+    "summary": "Every entry gets the same open prompt and nothing else: “Make a website dedicated to unicorns.” No system prompt, no requirements, one request. What changes is the model, where it runs and how hard it is allowed to think.",
+    "basePrompt": "base-prompt.txt"
+  },
+  "entries": [
+    {
+      "id": "claude-opus-5-5",
+      "title": "Claude Opus 5.5",
+      "maker": "Anthropic",
+      "date": "2026-11-24",
+      "page": "entries/claude-opus-5-5/index.html",
+      "variants": [],
+      "conditions": {
+        "Where it runs": "Cloud (Anthropic API)",
+        "Interface": "Claude Code, desktop app",
+        "Model": "claude-opus-5-5",
+        "Quantization": "n/a (hosted)",
+        "Hardware": "n/a (hosted)",
+        "Context window": "n/a (hosted)",
+        "Reasoning effort": "medium (session setting)",
+        "Strategy": "One shot: the open prompt, one request"
+      },
+      "metrics": {
+        "requests": 1,
+        "totalSeconds": 70,
+        "generatedTokens": null,
+        "generatedTokensNote": "Not measured; about 5,000 tokens estimated from the 16.9 KB file",
+        "tokensPerSecond": null,
+        "lines": 337,
+        "failedAttempts": 0
+      },
+      "steps": [
+        { "name": "One shot", "prompt": "base-prompt.txt", "seconds": 70, "tokens": null, "tokensPerSecond": null, "finish": "stop" }
+      ],
+      "notes": [
+        "Interpreted the prompt as a “field guide”: species cards, a unicorn sketch builder (mane colours, horn length, glow, suggested name), a history of sightings and an observer's oath.",
+        "The hero is a canvas night sky with twinkling stars and a rainbow trail that follows the pointer.",
+        "Time is wall clock from reading the prompt to the file being written, measured in the same session. The model was also running this experiment, so it knew the page would be compared."
+      ]
+    },
+    {
+      "id": "inkling-2-mini-q4km",
+      "title": "Inkling 2 Mini · Q4_K_M",
+      "maker": "Thinking Machines Lab",
+      "date": "2026-11-24",
+      "page": "entries/inkling-2-mini-q4km/index.html",
+      "variants": [],
+      "conditions": {
+        "Where it runs": "Local, offline",
+        "Interface": "llama-server from LM Studio's CUDA 12 runtime 2.82.0",
+        "Model": "Inkling 2 Mini, 26.4B total / 3.4B active (looped MoE)",
+        "Quantization": "Q4_K_M GGUF, lmstudio-community (16.3 GB)",
+        "Hardware": "RTX 5070 12 GB + 64 GB RAM, Windows 11; experts of 20 layers in RAM",
+        "Context window": "16K tokens",
+        "Reasoning effort": "medium (template thinking effort 0.7)",
+        "Strategy": "One shot: the open prompt, one request"
+      },
+      "metrics": {
+        "requests": 1,
+        "totalSeconds": 133,
+        "generatedTokens": 1614,
+        "generatedTokensNote": "Reasoning included (about 1,240 characters of it)",
+        "tokensPerSecond": 12.2,
+        "lines": 51,
+        "failedAttempts": 0
+      },
+      "steps": [
+        { "name": "One shot", "prompt": "base-prompt.txt", "answer": "entries/inkling-2-mini-q4km/answer.md", "reasoning": "entries/inkling-2-mini-q4km/reasoning.txt", "seconds": 133, "tokens": 1614, "tokensPerSecond": 12.2, "finish": "stop" }
+      ],
+      "notes": [
+        "Chose a small, calm page (“Stardust Meadow”) and finished on its own after 1,614 tokens, then suggested upgrades it could add later (animated stars, an SVG unicorn, a React version).",
+        "The page is taken verbatim from the single ```html block in its answer.",
+        "Runs fully offline on a mid-range gaming PC; generation speed is limited because most expert weights sit in system RAM."
+      ]
+    }
+  ]
+}
